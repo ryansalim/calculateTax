@@ -19,11 +19,15 @@ if let count = readLine(), let intCount = Int(count) {
     }
 }
 
+print("Input tax")
+let tax = readLine()
+let doubleTax = Double(tax!)
+
 var totalIncome: Double = 0
 for i in income {
     totalIncome += i
 }
 
-let tax = totalIncome * 0.1
-print("Tax = \(tax)")
-print("Nett income: \(totalIncome - tax)")
+let totalTax = totalIncome * doubleTax!
+print("Tax = \(totalTax)")
+print("Nett income: \(totalIncome - totalTax)")
